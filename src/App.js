@@ -34,7 +34,11 @@ class App extends Component {
   render() {
   return (
     <div className="App">
-      <Card></Card>
+      <Card
+        eng={this.state.currentCard.eng}
+        han={this.state.currentCard.han}
+        pin={this.state.currentCard.pin}
+        />
     </div>
   );
   }
