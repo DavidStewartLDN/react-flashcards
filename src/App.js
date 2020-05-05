@@ -2,11 +2,14 @@ import React, { Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Card from './Card/Card';
+import DrawButton from './DrawButton/DrawButton';
 
 class App extends Component {
 
   constructor(props){
-    super(props)
+    super(props);
+
+    this.updateCard = this.updateCard.bind(this);
 
     this.state = {
       cards: [
@@ -31,14 +34,26 @@ class App extends Component {
     return card
   }
 
+  updateCard(){
+    const currentCards = this.state.cards;
+    this.setState({
+      currentCard: this.getRandomCard(currentCards)
+    })
+  }
+
   render() {
   return (
     <div className="App">
+      <div className='cardRow'>
       <Card
         eng={this.state.currentCard.eng}
         han={this.state.currentCard.han}
         pin={this.state.currentCard.pin}
         />
+      </div>
+      <div className='buttonRow'>
+        <DrawButton drawCard={this.updateCard}/>
+      </div>
     </div>
   );
   }
