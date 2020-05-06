@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import './App.css';
-import Card from './Card/Card';
-import DrawButton from './DrawButton/DrawButton';
+import Card from './Card/Card.js';
+import DrawButton from './DrawButton/DrawButton.js';
 import firebase from 'firebase/app';
 import 'firebase/database';
 
