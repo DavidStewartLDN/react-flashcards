@@ -120,5 +120,19 @@
           "han": "王",
           "pin": "wáng"
       }
-  ]
+  ],
+  "russian_cards": [
+        {
+            "id": 1,
+            "eng": "to be",
+            "han": "是",
+            "pin": "shì"
+        },
+        {
+            "id": 2,
+            "eng": "king",
+            "han": "王",
+            "pin": "wáng"
+        }
+    ]
 }
