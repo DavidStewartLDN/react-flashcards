@@ -163,3 +163,7 @@ a {
   transform: translateX(110%);
   transition: all var(--speed) ease;
 }
+
+.thing {
+  color: #fff;
+}

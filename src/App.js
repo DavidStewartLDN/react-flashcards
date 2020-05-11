@@ -16,6 +16,7 @@ import NavItem from './Components/NavItem.js';
 import Navbar from './Components/Navbar.js';
 
 import { DB_CONFIG } from './Config/Firebase/db_config';
+import AnswerForm from './Components/AnswerForm';
 
 if (!firebase.apps.length) {
   firebase.initializeApp(DB_CONFIG);
@@ -96,6 +97,7 @@ class App extends Component {
           <DrawButton drawCard={this.updateCard}/>
         </div>
       </div>
+      <AnswerForm english={this.state.currentCard.english} native='Dasha'/>
     </div>
   );
   }
