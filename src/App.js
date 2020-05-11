@@ -27,7 +27,12 @@ class App extends Component {
     super(props);
 
     this.app = firebase
-    let language = window.location.href.split('/')[3]
+    let language = ""
+    if (window.location.href.split('/')[3]) {
+      language = window.location.href.split('/')[3]
+    } else {
+      language = 'italian'
+    }
     this.database = firebase.database().ref().child(language);
 
     this.updateCard = this.updateCard.bind(this);
