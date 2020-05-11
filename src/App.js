@@ -27,7 +27,7 @@ class App extends Component {
     super(props);
 
     this.app = firebase
-    this.database = firebase.database().ref().child('chinese');
+    this.database = firebase.database().ref().child('russian');
 
     this.updateCard = this.updateCard.bind(this);
 
