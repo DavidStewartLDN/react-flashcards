@@ -5,11 +5,11 @@ const Card = (props) => (
   <div className="card-container">
     <div className= "card">
       <div className="front">
-        <div className="eng">{props.eng}</div>
+        <div className="english">{props.english}</div>
       </div>
       <div className="back">
-        <div className="han">{props.han}</div>
-        <div className="pin">{props.pin}</div>
+        <div className="native">{props.native}</div>
+        <div className="latin_script">{props.latin_script}</div>
       </div>
     </div>
   </div>
