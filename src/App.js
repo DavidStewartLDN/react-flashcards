@@ -27,7 +27,8 @@ class App extends Component {
     super(props);
 
     this.app = firebase
-    this.database = firebase.database().ref().child('russian');
+    let language = window.location.href.split('/')[3]
+    this.database = firebase.database().ref().child(language);
 
     this.updateCard = this.updateCard.bind(this);
 
