@@ -1,9 +1,19 @@
 import React, { Component} from 'react';
 import './App.css';
-import Card from './Card/Card.js';
-import DrawButton from './DrawButton/DrawButton.js';
+import './index.css';
+import Card from './Components/Card/Card.js';
+import DrawButton from './Components/DrawButton/DrawButton.js';
 import firebase from 'firebase/app';
 import 'firebase/database';
+
+import { ReactComponent as BellIcon } from './icons/bell.svg';
+import { ReactComponent as MessengerIcon } from './icons/messenger.svg';
+import { ReactComponent as CaretIcon } from './icons/caret.svg';
+import { ReactComponent as PlusIcon } from './icons/plus.svg';
+
+import DropdownMenu from './Components/DropdownMenu.js';
+import NavItem from './Components/NavItem.js';
+import Navbar from './Components/Navbar.js';
 
 import { DB_CONFIG } from './Config/Firebase/db_config';
 
@@ -58,16 +68,27 @@ class App extends Component {
 
   render() {
   return (
-    <div className="App">
-      <div className='cardRow'>
-      <Card
-        eng={this.state.currentCard.eng}
-        han={this.state.currentCard.han}
-        pin={this.state.currentCard.pin}
-        />
-      </div>
-      <div className='buttonRow'>
-        <DrawButton drawCard={this.updateCard}/>
+    <div>
+      <Navbar>
+        <NavItem icon={<PlusIcon />} />
+        <NavItem icon={<BellIcon />} />
+        <NavItem icon={<MessengerIcon />} />
+
+        <NavItem icon={<CaretIcon />}>
+          <DropdownMenu></DropdownMenu>
+        </NavItem>
+      </Navbar>
+      <div className="App">
+        <div className='cardRow'>
+        <Card
+          eng={this.state.currentCard.eng}
+          han={this.state.currentCard.han}
+          pin={this.state.currentCard.pin}
+          />
+        </div>
+        <div className='buttonRow'>
+          <DrawButton drawCard={this.updateCard}/>
+        </div>
       </div>
     </div>
   );
