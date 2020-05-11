@@ -27,7 +27,7 @@ class App extends Component {
     super(props);
 
     this.app = firebase
-    this.database = firebase.database().ref().child('cards');
+    this.database = firebase.database().ref().child('chinese');
 
     this.updateCard = this.updateCard.bind(this);
 
@@ -43,9 +43,9 @@ class App extends Component {
     this.database.on('child_added', snap => {
       currentCards.push({
         id: snap.key,
-        eng: snap.val().eng,
-        han: snap.val().han,
-        pin: snap.val().pin
+        english: snap.val().english,
+        native: snap.val().native,
+        latin_script: snap.val().latin_script
       })
       this.setState({
         cards: currentCards,
@@ -81,9 +81,9 @@ class App extends Component {
       <div className="App">
         <div className='cardRow'>
         <Card
-          eng={this.state.currentCard.eng}
-          han={this.state.currentCard.han}
-          pin={this.state.currentCard.pin}
+          english={this.state.currentCard.english}
+          native={this.state.currentCard.native}
+          latin_script={this.state.currentCard.latin_script}
           />
         </div>
         <div className='buttonRow'>
