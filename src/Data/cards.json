@@ -1,138 +1,50 @@
 {
-  "cards": [
-      {
-          "id": 1,
-          "eng": "to be",
-          "han": "是",
-          "pin": "shì"
-      },
-      {
-          "id": 2,
-          "eng": "not",
-          "han": "不",
-          "pin": "bù"
-      },
-      {
-          "id": 3,
-          "eng": "person",
-          "han": "人",
-          "pin": "rén"
-      },
-      {
-          "id": 4,
-          "eng": "we",
-          "han": "我们",
-          "pin": "wǒmen"
-      },
-      {
-          "id": 5,
-          "eng": "at",
-          "han": "在",
-          "pin": "zài"
-      },
-      {
-          "id": 6,
-          "eng": "country",
-          "han": "国",
-          "pin": "guó"
-      },
-      {
-          "id": 7,
-          "eng": "middle",
-          "han": "中",
-          "pin": "zhōng"
-      },
-      {
-          "id": 8,
-          "eng": "have",
-          "han": "有",
-          "pin": "yǒu"
-      },
-      {
-          "id": 9,
-          "eng": "that",
-          "han": "那",
-          "pin": "nà"
-      },
-      {
-          "id": 10,
-          "eng": "to go",
-          "han": "去",
-          "pin": "qù"
-      },
-      {
-          "id": 11,
-          "eng": "to study, to learn",
-          "han": "学",
-          "pin": "xué"
-      },
-      {
-          "id": 12,
-          "eng": "to use",
-          "han": "用",
-          "pin": "yòng"
-      },
-      {
-          "id": 13,
-          "eng": "face, surface",
-          "han": "面",
-          "pin": "miàn"
-      },
-      {
-          "id": 14,
-          "eng": "work",
-          "han": "工",
-          "pin": "gōng"
-      },
-      {
-          "id": 15,
-          "eng": "speech",
-          "han": "话",
-          "pin": "huà"
-      },
-      {
-          "id": 16,
-          "eng": "very, quite",
-          "han": "很",
-          "pin": "hěn"
-      },
-      {
-          "id": 17,
-          "eng": "good",
-          "han": "好",
-          "pin": "hǎo"
-      },
-      {
-          "id": 18,
-          "eng": "bright, clear",
-          "han": "明",
-          "pin": "míng"
-      },
-      {
-          "id": 19,
-          "eng": "year",
-          "han": "年",
-          "pin": "nián"
-      },
-      {
-          "id": 20,
-          "eng": "king",
-          "han": "王",
-          "pin": "wáng"
-      }
+  "russian": [
+    {
+      "id": 1,
+      "type": "to have",
+      "native": "У меня есть вопрос",
+      "english": "I have a question",
+      "latin_script": "u menya est vopros"
+    },
+    {
+      "id": 2,
+      "type": "to have",
+      "native": "У меня есть сестра",
+      "english": "I have a sister",
+      "latin_script": "u menya est sestra"
+    }
   ],
-  "russian_cards": [
-        {
-            "id": 1,
-            "eng": "to be",
-            "han": "是",
-            "pin": "shì"
-        },
-        {
-            "id": 2,
-            "eng": "king",
-            "han": "王",
-            "pin": "wáng"
-        }
-    ]
+  "chinese": [
+    {
+      "id": 1,
+      "type": "family",
+      "native": "父母",
+      "english": "parents",
+      "latin_script": "Fùmǔ"
+    },
+    {
+      "id": 2,
+      "type": "country",
+      "native": "法国",
+      "english": "France",
+      "latin_script": "Fàguó"
+    }
+  ],
+  "italian": [
+    {
+      "id": 1,
+      "type": "toilet directions",
+      "native": "Dov'è la toilette",
+      "english": "Where is the toilet?",
+      "latin_script": null
+    },
+    {
+      "id": 2,
+      "type": "pleasantries",
+      "native": "grazie per l'informazione",
+      "english": "Thanks for the information",
+      "latin_script": null
+    }
+  ]
 }
