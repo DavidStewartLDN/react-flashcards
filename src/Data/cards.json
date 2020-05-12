@@ -2,17 +2,24 @@
   "russian": [
     {
       "id": 1,
-      "type": "to have",
-      "native": "У меня есть вопрос",
-      "english": "I have a question",
-      "latin_script": "u menya est vopros"
+      "type": "general",
+      "native": "вопрос",
+      "english": "question",
+      "latin_script": "vopros"
     },
     {
       "id": 2,
-      "type": "to have",
-      "native": "У меня есть сестра",
-      "english": "I have a sister",
-      "latin_script": "u menya est sestra"
+      "type": "family",
+      "native": "сестра",
+      "english": "sister",
+      "latin_script": "sestra"
+    },
+    {
+      "id": 3,
+      "type": "family",
+      "native": "брат",
+      "english": "brother",
+      "latin_script": "brat"
     }
   ],
   "chinese": [
@@ -35,15 +42,22 @@
     {
       "id": 1,
       "type": "toilet directions",
-      "native": "Dov'è la toilette",
-      "english": "Where is the toilet?",
+      "native": "toilette",
+      "english": "toilet",
       "latin_script": null
     },
     {
       "id": 2,
       "type": "pleasantries",
-      "native": "grazie per l'informazione",
-      "english": "Thanks for the information",
+      "native": "informazione",
+      "english": "information",
+      "latin_script": null
+    },
+    {
+      "id": 3,
+      "type": "pleasantries",
+      "native": "grazie",
+      "english": "thank you",
       "latin_script": null
     }
   ]
