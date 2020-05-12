@@ -5,8 +5,6 @@ class AnswerForm extends Component {
   constructor(props) {
     super(props);
     this.state = {value: ''};
-    this.english = props.english
-    this.native = props.native
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,7 +23,7 @@ class AnswerForm extends Component {
     return (
       <div>
         <div>
-          <div className="thing">Card Text goes here</div>
+          <div className="thing">{this.props.native}</div>
         </div>
         <form onSubmit={this.handleSubmit}>
           <label>

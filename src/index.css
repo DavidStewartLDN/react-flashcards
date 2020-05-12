@@ -167,3 +167,12 @@ a {
 .thing {
   color: #fff;
 }
+
+.app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form{
+  margin-top: 50px;
+}

@@ -85,7 +85,7 @@ class App extends Component {
           <DropdownMenu></DropdownMenu>
         </NavItem>
       </Navbar>
-      <div className="App">
+      <div className="app">
         <div className='cardRow'>
         <Card
           english={this.state.currentCard.english}
@@ -96,8 +96,11 @@ class App extends Component {
         <div className='buttonRow'>
           <DrawButton drawCard={this.updateCard}/>
         </div>
+        <div className="form">
+          <AnswerForm english={this.state.currentCard.english} native={this.state.currentCard.native}/>
+        </div>
       </div>
-      <AnswerForm english={this.state.currentCard.english} native='Dasha'/>
+      
     </div>
   );
   }
