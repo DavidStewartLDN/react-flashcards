@@ -176,3 +176,9 @@ a {
 .form{
   margin-top: 50px;
 }
+.green{
+  background: green;
+}
+.red{
+  background: red;
+}
