@@ -25,6 +25,7 @@ class AnswerForm extends Component {
       this.correct = 'red';
       console.log(this.correct)
     }
+    this.forceUpdate( )
   }
 
   // changeCss(){
