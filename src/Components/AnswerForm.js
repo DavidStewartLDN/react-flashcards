@@ -18,22 +18,14 @@ class AnswerForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     if(this.props.english === this.state.value){
-      alert('Correct answer');
       this.correct = 'green';
     }else{
-      alert('Wrong answer');
       this.correct = 'red';
       console.log(this.correct)
     }
     this.forceUpdate( )
   }
-
-  // changeCss(){
-  //   if(this.correct === true){
-
-  //   }
-  // }
-
+  
   render() {
     return (
       <div className={
