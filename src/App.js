@@ -1,17 +1,25 @@
-import React, { Component} from 'react';
+import React from 'react';
 import './index.css';
 
-import FlashCardPage from './FlashCardPage';
+import FlashCardPage from './Components/FlashCardPage';
+import TestPage from './Components/TestPage';
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 
 function App() {
   return (
       <Router>
-        <Switch>
-          <Route path='/' component={FlashCardPage} />
-        </Switch>
+        <div>
+          <Switch>
+            <Route path="/test">
+              <TestPage />
+            </Route>
+            <Route path="/">
+              <FlashCardPage />
+            </Route>
+          </Switch>
+        </div>
       </Router>
   );
 }
