@@ -1,24 +1,16 @@
-import React, { Component } from 'react';
+import React, { useState }  from 'react';
 import './DrawButton.css';
 
-class DrawButton extends Component{
-  constructor(props){
-    super(props);
-
-    this.drawCard = this.drawCard.bind(this);
+const DrawButton = (props) => {
+  const drawCard = () => {
+    props.drawCard();
   }
 
-  drawCard(){
-    this.props.drawCard();
-  }
-
-  render(props){
-    return(
-      <div className="buttonContainer">
-        <button className="btn" onClick={this.drawCard}>Draw Card</button>
-      </div>
-    )
-  }
+  return(
+    <div className="buttonContainer">
+      <button className="btn" onClick={drawCard}>Draw Card</button>
+    </div>
+  )
 }
 
 export default DrawButton
