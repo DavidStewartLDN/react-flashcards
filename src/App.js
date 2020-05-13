@@ -8,9 +8,11 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <FlashCardPage/>
-    </div>
+      <Router>
+        <Switch>
+          <Route path='/' component={FlashCardPage} />
+        </Switch>
+      </Router>
   );
 }
 
