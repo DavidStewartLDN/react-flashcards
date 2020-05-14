@@ -26,7 +26,7 @@ if (!firebase.apps.length) {
 const FlashCardPage = () => {
 
     // select language from URL
-    let language = 'italian'
+    let language = ""
     if (window.location.href.split('/')[3]) {
       language = window.location.href.split('/')[3]
     } else {
@@ -42,31 +42,27 @@ const FlashCardPage = () => {
     const [currentCard, setCurrentCard] = useState({})
 
     useEffect(() => {
-      console.log('UseEffect function called')
+      let currentCards = []
       database.on('child_added', snap => {
-        setCards(cards.push({
+        currentCards.push({
           id: snap.key,
           english: snap.val().english,
           native: snap.val().native,
           latin_script: snap.val().latin_script
-        }))
-        getRandomCard(cards);
+        })
+        setCards(currentCards);
+        setCurrentCard(getRandomCard(currentCards));
       })
-      console.log(currentCard)
     }, []);
 
-  const getRandomCard = () => {
-    console.log('Random card function called')
-    var card = cards[Math.floor(Math.random() * cards.length)]
-    setCurrentCard(card)
-    console.log(cards)
+  const getRandomCard = (cards) => {
+    var card = cards[Math.floor(Math.random() * cards.length)];
+    return card
+
   }
 
   const updateCard = () => {
-    console.log('UpdateCard function called')
-    console.log(cards)
-    getRandomCard(cards);
-    console.log(currentCard);
+    setCurrentCard(getRandomCard(cards));
   }
 
   return (
@@ -95,6 +91,7 @@ const FlashCardPage = () => {
         <Link to="/test" className="btn">Test</Link>
         </div>
       </div>
+      
     </div>
   );
 }

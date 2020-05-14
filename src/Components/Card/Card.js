@@ -5,7 +5,7 @@ const Card = (props) => (
   <div className="card-container">
     <div className= "card">
       <div className="front">
-        <div className="english">{props.english}{console.log('Card has been run')}{console.log(props)}</div>
+        <div className="english">{props.english}</div>
       </div>
       <div className="back">
         <div className="native">{props.native}</div>
