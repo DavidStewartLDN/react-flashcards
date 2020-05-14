@@ -86,8 +86,12 @@ const FlashCardPage = () => {
         <div className='buttonRow'>
           <DrawButton drawCard={updateCard}/>
         </div>
-        <div className="buttonContainer">
-        <Link to="/test" className="btn">Test</Link>
+        <div className="buttonRow">
+          <div className="buttonContainer">
+            <Link to="/test" className="btn">
+              <button to="/test" className="btn">Test</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
