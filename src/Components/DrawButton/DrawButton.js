@@ -1,8 +1,9 @@
-import React, { useState }  from 'react';
+import React from 'react';
 import './DrawButton.css';
 
 const DrawButton = (props) => {
   const drawCard = () => {
+    console.log(props)
     props.drawCard();
   }
 

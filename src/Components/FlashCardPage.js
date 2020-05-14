@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect} from 'react';
+import React, { useState, useEffect} from 'react';
 import './FlashCardPage.css';
 import '../index.css';
 import './DrawButton/DrawButton.css';
@@ -26,7 +26,7 @@ if (!firebase.apps.length) {
 const FlashCardPage = () => {
 
     // select language from URL
-    let language = ""
+    let language = 'italian'
     if (window.location.href.split('/')[3]) {
       language = window.location.href.split('/')[3]
     } else {
@@ -42,6 +42,7 @@ const FlashCardPage = () => {
     const [currentCard, setCurrentCard] = useState({})
 
     useEffect(() => {
+      console.log('UseEffect function called')
       database.on('child_added', snap => {
         setCards(cards.push({
           id: snap.key,
@@ -49,21 +50,22 @@ const FlashCardPage = () => {
           native: snap.val().native,
           latin_script: snap.val().latin_script
         }))
-        setCurrentCard(getRandomCard(cards))
+        getRandomCard(cards);
       })
-      console.log(cards);
-      console.log(currentCard);
+      console.log(currentCard)
     }, []);
 
-  const getRandomCard = (cards) => {
+  const getRandomCard = () => {
+    console.log('Random card function called')
     var card = cards[Math.floor(Math.random() * cards.length)]
-    console.log(card)
-    return card
-
+    setCurrentCard(card)
+    console.log(cards)
   }
 
   const updateCard = () => {
-    setCurrentCard(getRandomCard(cards));
+    console.log('UpdateCard function called')
+    console.log(cards)
+    getRandomCard(cards);
     console.log(currentCard);
   }
 
@@ -93,7 +95,6 @@ const FlashCardPage = () => {
         <Link to="/test" className="btn">Test</Link>
         </div>
       </div>
-      
     </div>
   );
 }
