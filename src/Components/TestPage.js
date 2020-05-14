@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './FlashCardPage.css';
 import './TestPage.css';
 import '../index.css';
-import Card from './Card/Card.js';
 import DrawButton from './DrawButton/DrawButton.js';
 import firebase from 'firebase/app';
 import 'firebase/database';

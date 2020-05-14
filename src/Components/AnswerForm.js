@@ -1,4 +1,4 @@
-import React, { Component, State} from 'react';
+import React, { Component } from 'react';
 import '../index.css';
 
 class AnswerForm extends Component {

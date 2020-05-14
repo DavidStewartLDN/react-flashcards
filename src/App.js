@@ -4,7 +4,7 @@ import './index.css';
 import FlashCardPage from './Components/FlashCardPage';
 import TestPage from './Components/TestPage';
 
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
 function App() {
