@@ -1,47 +1,36 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import '../index.css';
 
-class AnswerForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-    this.correct = 'green';
+const AnswerForm = (props) => {
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  const [value, setValue] = useState('')
+  const [correct, setCorrect] = useState('blue')
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    if(this.props.english === this.state.value){
-      this.correct = 'green';
+    if(props.english === value){
+      setCorrect('green');
     }else{
-      this.correct = 'red';
-      console.log(this.correct)
+      setCorrect('red');
     }
-    this.forceUpdate( )
   }
   
-  render() {
-    return (
-      <div className={
-        (this.correct === 'green') ? 'green' : 'red'
-      }>
-        <div>
-          <div className="thing">{this.props.native}</div>
-        </div>
-        <form  
-        onSubmit={this.handleSubmit}>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
-          <input type="submit" value="Submit" />
-        </form>
+  return (
+    <div className={correct}>
+      <div>
+        <div className="thing">{props.native}</div>
       </div>
-    );
-  }
+      <form  
+      onSubmit={handleSubmit}>
+          <input type="text" value={value} onChange={handleChange} />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  );
 }
 
 export default AnswerForm;
