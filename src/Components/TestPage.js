@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect} from 'react';
 import './FlashCardPage.css';
 import './TestPage.css';
 import '../index.css';
@@ -21,56 +21,42 @@ if (!firebase.apps.length) {
   firebase.initializeApp(DB_CONFIG);
 }
 
-class TestPage extends Component {
+const TestPage = () => {
 
-  constructor(props){
-    super(props);
+  // select language from URL
+  let language = 'russian'
 
-    // select language from URL
-    let language = 'russian'
+  // Bring in database from props
+  const app = firebase
+  const database = app.database().ref().child(language);
 
-    // Bring in database from props
-    this.app = firebase
-    this.database = this.app.database().ref().child(language);
+  // let updateCard = this.updateCard.bind(this);
+  const [cards, setCards] = useState([])
+  const [currentCard, setCurrentCard] = useState({})
 
-    this.updateCard = this.updateCard.bind(this);
-
-    this.state = {
-      cards: [],
-      currentCard: {}
-    }
-  }
-
-  componentWillMount(){
-    const currentCards = this.state.cards;
-
-    this.database.on('child_added', snap => {
+  useEffect(() => {
+    let currentCards = []
+    database.on('child_added', snap => {
       currentCards.push({
         id: snap.key,
         english: snap.val().english,
         native: snap.val().native,
         latin_script: snap.val().latin_script
       })
-      this.setState({
-        cards: currentCards,
-        currentCard: this.getRandomCard(currentCards)
-      })
+      setCards(currentCards);
+      setCurrentCard(getRandomCard(currentCards));
     })
-  }
+  }, []);
 
-  getRandomCard(currentCards){
-    var card = currentCards[Math.floor(Math.random() * currentCards.length)]
-    return card
-  }
+const getRandomCard = (cards) => {
+  var card = cards[Math.floor(Math.random() * cards.length)];
+  return card
+}
 
-  updateCard(){
-    const currentCards = this.state.cards;
-    this.setState({
-      currentCard: this.getRandomCard(currentCards)
-    })
-  }
+const updateCard = () => {
+  setCurrentCard(getRandomCard(cards));
+}
 
-  render() {
   return (
     <div>
       <Navbar>
@@ -84,16 +70,15 @@ class TestPage extends Component {
       </Navbar>
       <div className="app">
         <div className='buttonRow'>
-          <DrawButton drawCard={this.updateCard}/>
+          <DrawButton drawCard={updateCard}/>
         </div>
         <div className="form">
-          <AnswerForm english={this.state.currentCard.english} native={this.state.currentCard.native}/>
+          <AnswerForm english={currentCard.english} native={currentCard.native}/>
         </div>
       </div>
       
     </div>
   );
-  }
 }
 
 export default TestPage;
