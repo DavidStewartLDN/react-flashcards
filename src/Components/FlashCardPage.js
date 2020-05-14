@@ -58,7 +58,6 @@ const FlashCardPage = () => {
   const getRandomCard = (cards) => {
     var card = cards[Math.floor(Math.random() * cards.length)];
     return card
-
   }
 
   const updateCard = () => {
@@ -91,7 +90,6 @@ const FlashCardPage = () => {
         <Link to="/test" className="btn">Test</Link>
         </div>
       </div>
-      
     </div>
   );
 }
