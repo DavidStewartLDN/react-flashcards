@@ -52,8 +52,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
   background-color: rgba(255, 251, 251, 1);
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  
 }
 
 .card .back {
@@ -79,13 +78,15 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
   background-color: rgba(255, 251, 251, 1);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
-.card:hover .front {
+.card:hover .back {
   -webkit-transform: rotateY(0);
   transform: rotateY(0);
 }
-.card:hover .back {
+.card:hover .front {
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
