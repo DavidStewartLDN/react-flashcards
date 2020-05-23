@@ -34,6 +34,11 @@ const FlashCardPage = () => {
     const [cards, setCards] = useState([])
     const [currentCard, setCurrentCard] = useState({})
 
+    // new database
+    const [words, setWords] = useState(false);
+    const [currentWords, setCurrentWords] = useState(false);
+    const newArray = []
+
     useEffect(() => {
       let currentCards = []
       database.on('child_added', snap => {
@@ -48,6 +53,29 @@ const FlashCardPage = () => {
       })
     }, []);
 
+    useEffect(() => {
+      getWords();
+    }, []);
+    
+    function getWords() {
+      fetch('http://localhost:3001')
+        .then(response => {
+          return response.text();
+        })
+        .then(data => {
+          setWords(JSON.parse(data));
+        });
+    }
+
+  const currentLanguageCards = () => {
+    var arrayLength = words.length;
+    for (var i = 0; i < arrayLength; i++) {
+      if(words[i]["language"]===language){
+        console.log(words[i]);
+      }
+    }
+  }
+
   const getRandomCard = (cards) => {
     var card = cards[Math.floor(Math.random() * cards.length)];
     return card
@@ -56,6 +84,13 @@ const FlashCardPage = () => {
   const updateCard = () => {
     setCurrentCard(getRandomCard(cards));
   }
+
+  // console.log(cards)
+  // console.log(cards[0])
+
+  // console.log(typeof(words))
+  // console.log(words)
+  // console.log(words[0])
 
   return (
     <div>
@@ -69,6 +104,11 @@ const FlashCardPage = () => {
         </div>
         <div className='buttonRow'>
           <DrawButton drawCard={updateCard}/>
+        </div>
+        <div className="buttonRow">
+          <div className="buttonContainer">
+            <button onClick={currentLanguageCards}>Run Current language cards</button>
+          </div>
         </div>
         <div className="buttonRow">
           <div className="buttonContainer">
