@@ -36,7 +36,7 @@ const FlashCardPage = () => {
 
     // new database
     const [words, setWords] = useState(false);
-    const [currentWords, setCurrentWords] = useState(false);
+    const [currentWords, setCurrentWords] = useState([]);
     const newArray = []
 
     useEffect(() => {
@@ -71,6 +71,7 @@ const FlashCardPage = () => {
     var arrayLength = words.length;
     for (var i = 0; i < arrayLength; i++) {
       if(words[i]["language"]===language){
+        currentWords.push(words[i]);
         console.log(words[i]);
       }
     }
@@ -89,7 +90,8 @@ const FlashCardPage = () => {
   // console.log(cards[0])
 
   // console.log(typeof(words))
-  // console.log(words)
+  console.log(words)
+  console.log(`Current words are: ${currentWords}`)
   // console.log(words[0])
 
   return (
@@ -97,6 +99,13 @@ const FlashCardPage = () => {
       <div className="app">
         <div className='cardRow'>
         <Card
+          test={console.log(currentCard)}
+          english={currentCard.english}
+          native={currentCard.native}
+          latin_script={currentCard.latin_script}
+          />
+          <Card
+          test={console.log(currentCard)}
           english={currentCard.english}
           native={currentCard.native}
           latin_script={currentCard.latin_script}
