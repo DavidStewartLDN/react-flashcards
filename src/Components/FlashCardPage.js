@@ -26,32 +26,9 @@ const FlashCardPage = () => {
       language = 'italian'
     }
 
-    // Bring in database from props
-    const app = firebase
-    const database = app.database().ref().child(language);
-
-    // let updateCard = this.updateCard.bind(this);
-    const [cards, setCards] = useState([])
-    const [currentCard, setCurrentCard] = useState({})
-
     // new database
-    const [words, setWords] = useState(false);
-    const [currentWords, setCurrentWords] = useState([]);
-    const newArray = []
-
-    useEffect(() => {
-      let currentCards = []
-      database.on('child_added', snap => {
-        currentCards.push({
-          id: snap.key,
-          english: snap.val().english,
-          native: snap.val().native,
-          latin_script: snap.val().latin_script
-        })
-        setCards(currentCards);
-        setCurrentCard(getRandomCard(currentCards));
-      })
-    }, []);
+    const [words, setWords] = useState([]);
+    const [currentWord, setCurrentWord] = useState({});
 
     useEffect(() => {
       getWords();
@@ -60,64 +37,51 @@ const FlashCardPage = () => {
     function getWords() {
       fetch('http://localhost:3001')
         .then(response => {
+          console.log(response);
           return response.text();
         })
         .then(data => {
+          console.log(data);
+          console.log(JSON.parse(data));
           setWords(JSON.parse(data));
+        })
+        .catch(error => {
+          console.log(error);
         });
     }
 
-  const currentLanguageCards = () => {
-    var arrayLength = words.length;
-    for (var i = 0; i < arrayLength; i++) {
-      if(words[i]["language"]===language){
-        currentWords.push(words[i]);
-        console.log(words[i]);
-      }
+  const getRandomCard = (words) => {
+    if(words.length === 0) {
+
+    } else {
+      var card = words[Math.floor(Math.random() * words.length)];
+      console.log(words)
+      console.log(card)
+      return card
     }
   }
 
-  const getRandomCard = (cards) => {
-    var card = cards[Math.floor(Math.random() * cards.length)];
-    return card
-  }
-
   const updateCard = () => {
-    setCurrentCard(getRandomCard(cards));
+    setCurrentWord(getRandomCard(words));
   }
 
-  // console.log(cards)
-  // console.log(cards[0])
-
-  // console.log(typeof(words))
+ 
   console.log(words)
-  console.log(`Current words are: ${currentWords}`)
-  // console.log(words[0])
+  console.log(currentWord)
+
 
   return (
     <div>
       <div className="app">
         <div className='cardRow'>
         <Card
-          test={console.log(currentCard)}
-          english={currentCard.english}
-          native={currentCard.native}
-          latin_script={currentCard.latin_script}
-          />
-          <Card
-          test={console.log(currentCard)}
-          english={currentCard.english}
-          native={currentCard.native}
-          latin_script={currentCard.latin_script}
+          english={currentWord.english}
+          native={currentWord.native}
+          latin_script={currentWord.latin_script}
           />
         </div>
         <div className='buttonRow'>
           <DrawButton drawCard={updateCard}/>
-        </div>
-        <div className="buttonRow">
-          <div className="buttonContainer">
-            <button onClick={currentLanguageCards}>Run Current language cards</button>
-          </div>
         </div>
         <div className="buttonRow">
           <div className="buttonContainer">
