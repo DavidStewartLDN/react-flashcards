@@ -1,0 +1,241 @@
+
+[
+  {
+    "id": 1,
+    "type": "general",
+    "native": "вопрос",
+    "english": "question",
+    "latin_script": "vopros"
+  },
+  {
+    "id": 2,
+    "type": "family",
+    "native": "сестра",
+    "english": "sister",
+    "latin_script": "sestra"
+  },
+  {
+    "id": 3,
+    "type": "family",
+    "native": "брат",
+    "english": "brother",
+    "latin_script": "brat"
+  },
+  {
+    "id": 4,
+    "type": "greeting",
+    "native": "привет",
+    "english": "hello",
+    "latin_script": "preevyet"
+  },
+  {
+    "id": 5,
+    "type": "animal",
+    "native": "кот",
+    "english": "cat",
+    "latin_script": "kot"
+  },
+  {
+    "id": 6,
+    "type": "animal",
+    "native": "собака",
+    "english": "dog",
+    "latin_script": "sabaka"
+  },
+  {
+    "id": 7,
+    "type": "animal",
+    "native": "слон",
+    "english": "elephant",
+    "latin_script": "slon"
+  },
+  {
+    "id": 8,
+    "type": "animal",
+    "native": "жираф",
+    "english": "giraffe",
+    "latin_script": "zheraf"
+  },
+  {
+    "id": 9,
+    "type": "animal",
+    "native": "дельфин",
+    "english": "dolphin",
+    "latin_script": "delfeen"
+  },
+  {
+    "id": 10,
+    "type": "animal",
+    "native": "заяц",
+    "english": "hare",
+    "latin_script": "zayats"
+  },
+  {
+    "id": 11,
+    "type": "animal",
+    "native": "енот",
+    "english": "racoon",
+    "latin_script": "yenot"
+  },
+  {
+    "id": 12,
+    "type": "animal",
+    "native": "змея",
+    "english": "snake",
+    "latin_script": "zmeya"
+  },
+  {
+    "id": 13,
+    "type": "animal",
+    "native": "волк",
+    "english": "wolf",
+    "latin_script": "volk"
+  },
+  {
+    "id": 14,
+    "type": "animal",
+    "native": "лиса",
+    "english": "fox",
+    "latin_script": "leysa"
+  },
+  {
+    "id": 15,
+    "type": "animal",
+    "native": "белка",
+    "english": "squirrel",
+    "latin_script": "vyelka"
+  },
+  {
+    "id": 16,
+    "type": "animal",
+    "native": "птица",
+    "english": "bird",
+    "latin_script": "pteetsa"
+  },
+  {
+    "id": 17,
+    "type": "animal",
+    "native": "рыба",
+    "english": "fish",
+    "latin_script": "reeba"
+  },
+  {
+    "id": 18,
+    "type": "people",
+    "native": "девушка",
+    "english": "girl",
+    "latin_script": "dyevyshka"
+  },
+  {
+    "id": 19,
+    "type": "people",
+    "native": "женщина",
+    "english": "woman",
+    "latin_script": "zhensheena"
+  },
+  {
+    "id": 20,
+    "type": "people",
+    "native": "мужчина",
+    "english": "man",
+    "latin_script": "moosheena"
+  },
+  {
+    "id": 21,
+    "type": "people",
+    "native": "ребёнок",
+    "english": "kid",
+    "latin_script": "rebyonak"
+  },
+  {
+    "id": 22,
+    "type": "people",
+    "native": "ёж",
+    "english": "hedgehog",
+    "latin_script": "yozh"
+  },
+  {
+    "id": 23,
+    "type": "animal",
+    "native": "медведь",
+    "english": "bear",
+    "latin_script": "medvedt"
+  },
+  {
+    "id": 24,
+    "type": "people",
+    "native": "девочка",
+    "english": "girl",
+    "latin_script": "devochka"
+  },
+  {
+    "id": 25,
+    "type": "people",
+    "native": "мальчик",
+    "english": "boy",
+    "latin_script": "malcheek"
+  },
+  {
+    "id": 26,
+    "type": "people",
+    "native": "бабушка",
+    "english": "grandmother",
+    "latin_script": "babooshka"
+  },
+  {
+    "id": 27,
+    "type": "people",
+    "native": "дедушка",
+    "english": "grandfather",
+    "latin_script": "dyedooshka"
+  },
+  {
+    "id": 28,
+    "type": "people",
+    "native": "мама",
+    "english": "mum",
+    "latin_script": "mama"
+  },
+  {
+    "id": 29,
+    "type": "people",
+    "native": "папа",
+    "english": "dad",
+    "latin_script": "papa"
+  },
+  {
+    "id": 30,
+    "type": "people",
+    "native": "семья",
+    "english": "family",
+    "latin_script": "semya"
+  },
+  {
+    "id": 31,
+    "type": "preposition",
+    "native": "мой/моя",
+    "english": "my",
+    "latin_script": "moy/maya"
+  },
+  {
+    "id": 32,
+    "type": "preposition",
+    "native": "твой/твоя",
+    "english": "your",
+    "latin_script": "tvoy/tvaya"
+  },
+  {
+    "id": 33,
+    "type": null,
+    "native": null,
+    "english": null,
+    "latin_script": null
+  },
+  {
+    "id": 34,
+    "type": null,
+    "native": null,
+    "english": null,
+    "latin_script": null
+  }
+]

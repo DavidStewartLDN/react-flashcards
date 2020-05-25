@@ -12,10 +12,6 @@ import { DB_CONFIG } from '../Config/Firebase/db_config';
 
 import { Link } from "react-router-dom";
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(DB_CONFIG);
-}
-
 const FlashCardPage = () => {
 
     // select language from URL
@@ -41,7 +37,6 @@ const FlashCardPage = () => {
           return response.text();
         })
         .then(data => {
-          console.log(data);
           console.log(JSON.parse(data));
           setWords(JSON.parse(data));
         })
@@ -51,24 +46,18 @@ const FlashCardPage = () => {
     }
 
   const getRandomCard = (words) => {
-    if(words.length === 0) {
-
-    } else {
       var card = words[Math.floor(Math.random() * words.length)];
       console.log(words)
       console.log(card)
       return card
-    }
   }
 
   const updateCard = () => {
     setCurrentWord(getRandomCard(words));
   }
 
- 
   console.log(words)
   console.log(currentWord)
-
 
   return (
     <div>
