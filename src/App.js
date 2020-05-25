@@ -13,6 +13,8 @@ import { ReactComponent as PlusIcon } from './icons/plus.svg';
 import DropdownMenu from './Components/DropdownMenu.js';
 import NavItem from './Components/NavItem.js';
 import Navbar from './Components/Navbar.js';
+import { LanguageContext } from './LanguageContext';
+
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
         </NavItem>
       </Navbar>
       <Router>
+      <LanguageContext.Provider value="Why this not work">
         <div>
           <Switch>
             <Route path="/test">
@@ -37,6 +40,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+      </LanguageContext.Provider>
       </Router>
       </div>
   );

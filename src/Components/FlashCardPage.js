@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useContext} from 'react';
 import './FlashCardPage.css';
 import '../index.css';
 import './DrawButton/DrawButton.css';
@@ -7,8 +7,12 @@ import DrawButton from './DrawButton/DrawButton.js';
 
 
 import { Link } from "react-router-dom";
+import { LanguageContext } from '../LanguageContext';
 
 const FlashCardPage = () => {
+
+    // get context
+    const msg = useContext(LanguageContext);
 
     // select language from URL
     let language = ""
@@ -58,6 +62,7 @@ const FlashCardPage = () => {
           latin_script={currentCard.latin_script}
           />
         </div>
+        <p style={{color: "red"}}>{msg}</p>
         <div className='buttonRow'>
           <DrawButton drawCard={updateCard}/>
         </div>
