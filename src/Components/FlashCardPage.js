@@ -5,10 +5,6 @@ import './DrawButton/DrawButton.css';
 import Card from './Card/Card.js';
 import DrawButton from './DrawButton/DrawButton.js';
 
-import firebase from 'firebase/app';
-import 'firebase/database';
-import { DB_CONFIG } from '../Config/Firebase/db_config';
-
 
 import { Link } from "react-router-dom";
 
@@ -23,50 +19,43 @@ const FlashCardPage = () => {
     }
 
     // new database
-    const [words, setWords] = useState([]);
-    const [currentWord, setCurrentWord] = useState({});
+    const [cards, setCards] = useState([]);
+    const [currentCard, setCurrentCard] = useState({});
 
     useEffect(() => {
-      getWords();
+      getCards();
     }, []);
     
-    function getWords() {
-      fetch('http://localhost:3001')
+    function getCards() {
+      fetch(`http://localhost:3001/${language}`)
         .then(response => {
-          console.log(response);
           return response.text();
         })
         .then(data => {
-          console.log(JSON.parse(data));
-          setWords(JSON.parse(data));
+          setCards(JSON.parse(data));
         })
         .catch(error => {
           console.log(error);
         });
     }
 
-  const getRandomCard = (words) => {
-      var card = words[Math.floor(Math.random() * words.length)];
-      console.log(words)
-      console.log(card)
+  const getRandomCard = (cards) => {
+      var card = cards[Math.floor(Math.random() * cards.length)];
       return card
   }
 
   const updateCard = () => {
-    setCurrentWord(getRandomCard(words));
+    setCurrentCard(getRandomCard(cards));
   }
-
-  console.log(words)
-  console.log(currentWord)
 
   return (
     <div>
       <div className="app">
         <div className='cardRow'>
         <Card
-          english={currentWord.english}
-          native={currentWord.native}
-          latin_script={currentWord.latin_script}
+          english={currentCard.english}
+          native={currentCard.native}
+          latin_script={currentCard.latin_script}
           />
         </div>
         <div className='buttonRow'>

@@ -66,7 +66,7 @@ function DropdownMenu() {
             Main Menu
         </DropdownItem>
         <DropdownItem
-          href='chinese'
+          href='mandarin'
           leftIcon='🇨🇳'>
             Mandarin
         </DropdownItem>
