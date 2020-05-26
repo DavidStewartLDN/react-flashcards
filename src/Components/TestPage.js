@@ -1,22 +1,18 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useContext} from 'react';
 import './FlashCardPage.css';
 import './TestPage.css';
 import '../index.css';
 import DrawButton from './DrawButton/DrawButton.js';
-import firebase from 'firebase/app';
-import 'firebase/database';
-import { DB_CONFIG } from '../Config/Firebase/db_config';
+import './DrawButton/DrawButton.css';
 
 import AnswerForm from './AnswerForm';
+import { LanguageContext } from '../LanguageContext';
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(DB_CONFIG);
-}
+import { Link } from "react-router-dom";
 
 const TestPage = () => {
 
-  // select language from URL
-  let language = 'russian'
+  const {language, setLanguage} = useContext(LanguageContext)
 
   // new database
   const [cards, setCards] = useState([]);
@@ -24,7 +20,8 @@ const TestPage = () => {
 
   useEffect(() => {
     getCards();
-  }, []);
+    setCurrentCard({english: "Press Draw Card!"})
+  }, [language]);
   
   function getCards() {
     fetch(`http://localhost:3001/${language}`)
@@ -41,12 +38,15 @@ const TestPage = () => {
 
   const getRandomCard = (cards) => {
       var card = cards[Math.floor(Math.random() * cards.length)];
+      console.log(card)
       return card
   }
 
   const updateCard = () => {
     setCurrentCard(getRandomCard(cards));
   }
+
+  console.log(cards)
 
   return (
     <div>
@@ -58,6 +58,13 @@ const TestPage = () => {
           <AnswerForm english={currentCard.english} native={currentCard.native}/>
         </div>
       </div>
+      <div className="buttonRow">
+          <div className="buttonContainer">
+            <Link to="/" className="btn">
+              <button to="/" className="btn">Flashcard</button>
+            </Link>
+          </div>
+        </div>
       
     </div>
   );

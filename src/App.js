@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 
 import FlashCardPage from './Components/FlashCardPage';
@@ -13,32 +13,39 @@ import { ReactComponent as PlusIcon } from './icons/plus.svg';
 import DropdownMenu from './Components/DropdownMenu.js';
 import NavItem from './Components/NavItem.js';
 import Navbar from './Components/Navbar.js';
+import { LanguageContext } from './LanguageContext';
+
 
 function App() {
+  const [language, setLanguage] = useState('italian');
+  console.log(language)
+
   return (
     <div>
-    <Navbar>
-        <NavItem icon={<PlusIcon />} />
-        <NavItem icon={<BellIcon />} />
-        <NavItem icon={<MessengerIcon />} />
+      <LanguageContext.Provider value={{ language, setLanguage }}>
+        <Navbar>
+          <NavItem icon={<PlusIcon />} />
+          <NavItem icon={<BellIcon />} />
+          <NavItem icon={<MessengerIcon />} />
 
-        <NavItem icon={<CaretIcon />}>
-          <DropdownMenu></DropdownMenu>
-        </NavItem>
-      </Navbar>
-      <Router>
-        <div>
-          <Switch>
-            <Route path="/test">
-              <TestPage />
-            </Route>
-            <Route path="/">
-              <FlashCardPage />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-      </div>
+          <NavItem icon={<CaretIcon />}>
+            <DropdownMenu></DropdownMenu>
+          </NavItem>
+        </Navbar>
+        <Router>
+          <div>
+            <Switch>
+              <Route path="/test">
+                <TestPage />
+              </Route>
+              <Route path="/">
+                <FlashCardPage />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </LanguageContext.Provider>
+    </div>
   );
 }
 

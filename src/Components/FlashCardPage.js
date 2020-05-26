@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useContext} from 'react';
 import './FlashCardPage.css';
 import '../index.css';
 import './DrawButton/DrawButton.css';
@@ -7,16 +7,13 @@ import DrawButton from './DrawButton/DrawButton.js';
 
 
 import { Link } from "react-router-dom";
+import { LanguageContext } from '../LanguageContext';
+import CurrentLanguageDisplay from './CurrentLanguageDisplay';
 
 const FlashCardPage = () => {
 
-    // select language from URL
-    let language = ""
-    if (window.location.href.split('/')[3]) {
-      language = window.location.href.split('/')[3]
-    } else {
-      language = 'italian'
-    }
+    // get context
+    const {language, setLanguage} = useContext(LanguageContext)
 
     // new database
     const [cards, setCards] = useState([]);
@@ -24,7 +21,8 @@ const FlashCardPage = () => {
 
     useEffect(() => {
       getCards();
-    }, []);
+      setCurrentCard({english: "Press Draw Card!"})
+    }, [language]);
     
     function getCards() {
       fetch(`http://localhost:3001/${language}`)
@@ -51,6 +49,7 @@ const FlashCardPage = () => {
   return (
     <div>
       <div className="app">
+        <CurrentLanguageDisplay/>
         <div className='cardRow'>
         <Card
           english={currentCard.english}
