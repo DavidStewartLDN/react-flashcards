@@ -21,30 +21,30 @@ function App() {
 
   return (
     <div>
-    <Navbar>
-        <NavItem icon={<PlusIcon />} />
-        <NavItem icon={<BellIcon />} />
-        <NavItem icon={<MessengerIcon />} />
-
-        <NavItem icon={<CaretIcon />}>
-          <DropdownMenu></DropdownMenu>
-        </NavItem>
-      </Navbar>
-      <Router>
       <LanguageContext.Provider value={{ language, setLanguage }}>
-        <div>
-          <Switch>
-            <Route path="/test">
-              <TestPage />
-            </Route>
-            <Route path="/">
-              <FlashCardPage />
-            </Route>
-          </Switch>
-        </div>
+        <Navbar>
+          <NavItem icon={<PlusIcon />} />
+          <NavItem icon={<BellIcon />} />
+          <NavItem icon={<MessengerIcon />} />
+
+          <NavItem icon={<CaretIcon />}>
+            <DropdownMenu></DropdownMenu>
+          </NavItem>
+        </Navbar>
+        <Router>
+          <div>
+            <Switch>
+              <Route path="/test">
+                <TestPage />
+              </Route>
+              <Route path="/">
+                <FlashCardPage />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
       </LanguageContext.Provider>
-      </Router>
-      </div>
+    </div>
   );
 }
 
