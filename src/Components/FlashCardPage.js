@@ -20,7 +20,7 @@ const FlashCardPage = () => {
 
     useEffect(() => {
       getCards();
-      setCurrentCard({})
+      setCurrentCard({english: "Press Draw Card!"})
     }, [language]);
     
     function getCards() {
