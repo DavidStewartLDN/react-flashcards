@@ -9,18 +9,20 @@ import DrawButton from './DrawButton/DrawButton.js';
 import { Link } from "react-router-dom";
 import { LanguageContext } from '../LanguageContext';
 
-const FlashCardPage = () => {
+const FlashCardPage = (props) => {
+
+  console.log(props.language.languageTest)
 
     // get context
-    const msg = useContext(LanguageContext);
+    const {languageTest, setLanguageTest} = useContext(LanguageContext)
 
     // select language from URL
-    let language = ""
-    if (window.location.href.split('/')[3]) {
-      language = window.location.href.split('/')[3]
-    } else {
-      language = 'italian'
-    }
+    // let language = ""
+    // if (window.location.href.split('/')[3]) {
+    //   language = window.location.href.split('/')[3]
+    // } else {
+    //   language = 'italian'
+    // }
 
     // new database
     const [cards, setCards] = useState([]);
@@ -28,10 +30,10 @@ const FlashCardPage = () => {
 
     useEffect(() => {
       getCards();
-    }, []);
+    }, [props.language.languageTest]);
     
     function getCards() {
-      fetch(`http://localhost:3001/${language}`)
+      fetch(`http://localhost:3001/${languageTest}`)
         .then(response => {
           return response.text();
         })
@@ -62,7 +64,8 @@ const FlashCardPage = () => {
           latin_script={currentCard.latin_script}
           />
         </div>
-        <p style={{color: "red"}}>{msg}</p>
+        <p style={{color: "red"}}>{languageTest}</p>
+        <button onClick={() => setLanguageTest('mandarin')}>change language</button>
         <div className='buttonRow'>
           <DrawButton drawCard={updateCard}/>
         </div>

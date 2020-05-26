@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 
 import FlashCardPage from './Components/FlashCardPage';
@@ -17,6 +17,8 @@ import { LanguageContext } from './LanguageContext';
 
 
 function App() {
+  const [languageTest, setLanguageTest] = useState('italian');
+
   return (
     <div>
     <Navbar>
@@ -29,14 +31,18 @@ function App() {
         </NavItem>
       </Navbar>
       <Router>
-      <LanguageContext.Provider value="Why this not work">
+      <LanguageContext.Provider value={{ languageTest, setLanguageTest }}>
         <div>
           <Switch>
             <Route path="/test">
               <TestPage />
             </Route>
             <Route path="/">
-              <FlashCardPage />
+            <LanguageContext.Consumer>
+                {languageTest => (
+                  <FlashCardPage language={languageTest}/>
+                )}
+              </LanguageContext.Consumer>
             </Route>
           </Switch>
         </div>

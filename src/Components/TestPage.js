@@ -1,22 +1,20 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useContext} from 'react';
 import './FlashCardPage.css';
 import './TestPage.css';
 import '../index.css';
 import DrawButton from './DrawButton/DrawButton.js';
-import firebase from 'firebase/app';
-import 'firebase/database';
-import { DB_CONFIG } from '../Config/Firebase/db_config';
 
 import AnswerForm from './AnswerForm';
+import { LanguageContext } from '../LanguageContext';
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(DB_CONFIG);
-}
+import { Link } from "react-router-dom";
 
 const TestPage = () => {
 
+  const {languageTest, setLanguageTest} = useContext(LanguageContext)
+
   // select language from URL
-  let language = 'russian'
+  let language = languageTest
 
   // new database
   const [cards, setCards] = useState([]);
@@ -54,10 +52,19 @@ const TestPage = () => {
         <div className='buttonRow'>
           <DrawButton drawCard={updateCard}/>
         </div>
+        <p style={{color: "red"}}>{languageTest}</p>
+        <button onClick={() => setLanguageTest('russian')}>change language</button>
         <div className="form">
           <AnswerForm english={currentCard.english} native={currentCard.native}/>
         </div>
       </div>
+      <div className="buttonRow">
+          <div className="buttonContainer">
+            <Link to="/" className="btn">
+              <button to="/" className="btn">Flashcard</button>
+            </Link>
+          </div>
+        </div>
       
     </div>
   );
