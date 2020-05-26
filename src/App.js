@@ -18,6 +18,7 @@ import { LanguageContext } from './LanguageContext';
 
 function App() {
   const [language, setLanguage] = useState('italian');
+  console.log(language)
 
   return (
     <div>
