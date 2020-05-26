@@ -8,6 +8,7 @@ import DrawButton from './DrawButton/DrawButton.js';
 
 import { Link } from "react-router-dom";
 import { LanguageContext } from '../LanguageContext';
+import CurrentLanguageDisplay from './CurrentLanguageDisplay';
 
 const FlashCardPage = () => {
 
@@ -48,6 +49,7 @@ const FlashCardPage = () => {
   return (
     <div>
       <div className="app">
+        <CurrentLanguageDisplay/>
         <div className='cardRow'>
         <Card
           english={currentCard.english}
@@ -55,8 +57,6 @@ const FlashCardPage = () => {
           latin_script={currentCard.latin_script}
           />
         </div>
-        <p style={{color: "red"}}>{language}</p>
-        <button onClick={() => {setLanguage('mandarin')}}>change language</button>
         <div className='buttonRow'>
           <DrawButton drawCard={updateCard}/>
         </div>

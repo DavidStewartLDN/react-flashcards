@@ -3,6 +3,7 @@ import './FlashCardPage.css';
 import './TestPage.css';
 import '../index.css';
 import DrawButton from './DrawButton/DrawButton.js';
+import './DrawButton/DrawButton.css';
 
 import AnswerForm from './AnswerForm';
 import { LanguageContext } from '../LanguageContext';
@@ -11,10 +12,7 @@ import { Link } from "react-router-dom";
 
 const TestPage = () => {
 
-  const {languageTest, setLanguageTest} = useContext(LanguageContext)
-
-  // select language from URL
-  let language = languageTest
+  const {language, setLanguage} = useContext(LanguageContext)
 
   // new database
   const [cards, setCards] = useState([]);
@@ -22,7 +20,8 @@ const TestPage = () => {
 
   useEffect(() => {
     getCards();
-  }, []);
+    setCurrentCard({english: "Press Draw Card!"})
+  }, [language]);
   
   function getCards() {
     fetch(`http://localhost:3001/${language}`)
@@ -39,6 +38,7 @@ const TestPage = () => {
 
   const getRandomCard = (cards) => {
       var card = cards[Math.floor(Math.random() * cards.length)];
+      console.log(card)
       return card
   }
 
@@ -46,14 +46,14 @@ const TestPage = () => {
     setCurrentCard(getRandomCard(cards));
   }
 
+  console.log(cards)
+
   return (
     <div>
       <div className="app">
         <div className='buttonRow'>
           <DrawButton drawCard={updateCard}/>
         </div>
-        <p style={{color: "red"}}>{languageTest}</p>
-        <button onClick={() => setLanguageTest('russian')}>change language</button>
         <div className="form">
           <AnswerForm english={currentCard.english} native={currentCard.native}/>
         </div>

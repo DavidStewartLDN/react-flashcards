@@ -1,6 +1,5 @@
 import {createContext} from 'react';
 
 export const LanguageContext = createContext({
-  language: 'russian',
-  setLanguage: () => {}
+  language: 'russian'
 });
