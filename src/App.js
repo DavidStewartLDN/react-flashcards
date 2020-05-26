@@ -38,11 +38,7 @@ function App() {
               <TestPage />
             </Route>
             <Route path="/">
-            <LanguageContext.Consumer>
-                {language => (
-                  <FlashCardPage language={language}/>
-                )}
-              </LanguageContext.Consumer>
+              <FlashCardPage />
             </Route>
           </Switch>
         </div>

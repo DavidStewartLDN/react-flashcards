@@ -9,9 +9,7 @@ import DrawButton from './DrawButton/DrawButton.js';
 import { Link } from "react-router-dom";
 import { LanguageContext } from '../LanguageContext';
 
-const FlashCardPage = (props) => {
-
-  console.log(props.language.language)
+const FlashCardPage = () => {
 
     // get context
     const {language, setLanguage} = useContext(LanguageContext)
@@ -22,6 +20,7 @@ const FlashCardPage = (props) => {
 
     useEffect(() => {
       getCards();
+      setCurrentCard({})
     }, [language]);
     
     function getCards() {
@@ -57,7 +56,7 @@ const FlashCardPage = (props) => {
           />
         </div>
         <p style={{color: "red"}}>{language}</p>
-        <button onClick={() => { setLanguage('mandarin'); setCurrentCard({})}}>change language</button>
+        <button onClick={() => {setLanguage('mandarin')}}>change language</button>
         <div className='buttonRow'>
           <DrawButton drawCard={updateCard}/>
         </div>
