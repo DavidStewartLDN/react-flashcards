@@ -17,7 +17,7 @@ import { LanguageContext } from './LanguageContext';
 
 
 function App() {
-  const [languageTest, setLanguageTest] = useState('italian');
+  const [language, setLanguage] = useState('italian');
 
   return (
     <div>
@@ -31,7 +31,7 @@ function App() {
         </NavItem>
       </Navbar>
       <Router>
-      <LanguageContext.Provider value={{ languageTest, setLanguageTest }}>
+      <LanguageContext.Provider value={{ language, setLanguage }}>
         <div>
           <Switch>
             <Route path="/test">
@@ -39,8 +39,8 @@ function App() {
             </Route>
             <Route path="/">
             <LanguageContext.Consumer>
-                {languageTest => (
-                  <FlashCardPage language={languageTest}/>
+                {language => (
+                  <FlashCardPage language={language}/>
                 )}
               </LanguageContext.Consumer>
             </Route>

@@ -11,18 +11,10 @@ import { LanguageContext } from '../LanguageContext';
 
 const FlashCardPage = (props) => {
 
-  console.log(props.language.languageTest)
+  console.log(props.language.language)
 
     // get context
-    const {languageTest, setLanguageTest} = useContext(LanguageContext)
-
-    // select language from URL
-    // let language = ""
-    // if (window.location.href.split('/')[3]) {
-    //   language = window.location.href.split('/')[3]
-    // } else {
-    //   language = 'italian'
-    // }
+    const {language, setLanguage} = useContext(LanguageContext)
 
     // new database
     const [cards, setCards] = useState([]);
@@ -30,10 +22,10 @@ const FlashCardPage = (props) => {
 
     useEffect(() => {
       getCards();
-    }, [props.language.languageTest]);
+    }, [language]);
     
     function getCards() {
-      fetch(`http://localhost:3001/${languageTest}`)
+      fetch(`http://localhost:3001/${language}`)
         .then(response => {
           return response.text();
         })
@@ -64,8 +56,8 @@ const FlashCardPage = (props) => {
           latin_script={currentCard.latin_script}
           />
         </div>
-        <p style={{color: "red"}}>{languageTest}</p>
-        <button onClick={() => setLanguageTest('mandarin')}>change language</button>
+        <p style={{color: "red"}}>{language}</p>
+        <button onClick={() => { setLanguage('mandarin'); setCurrentCard({})}}>change language</button>
         <div className='buttonRow'>
           <DrawButton drawCard={updateCard}/>
         </div>
