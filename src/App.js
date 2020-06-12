@@ -14,11 +14,11 @@ import DropdownMenu from './Components/DropdownMenu.js';
 import NavItem from './Components/NavItem.js';
 import Navbar from './Components/Navbar.js';
 import { LanguageContext } from './LanguageContext';
+import CurrentLanguageDisplay from './Components/CurrentLanguageDisplay';
 
 
 function App() {
   const [language, setLanguage] = useState('italian');
-  console.log(language)
 
   return (
     <div>
@@ -32,6 +32,9 @@ function App() {
             <DropdownMenu></DropdownMenu>
           </NavItem>
         </Navbar>
+          <div className="app">
+            <CurrentLanguageDisplay/>
+          </div>
         <Router>
           <div>
             <Switch>

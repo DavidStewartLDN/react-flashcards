@@ -8,7 +8,6 @@ import DrawButton from './DrawButton/DrawButton.js';
 
 import { Link } from "react-router-dom";
 import { LanguageContext } from '../LanguageContext';
-import CurrentLanguageDisplay from './CurrentLanguageDisplay';
 
 const FlashCardPage = () => {
 
@@ -49,7 +48,6 @@ const FlashCardPage = () => {
   return (
     <div>
       <div className="app">
-        <CurrentLanguageDisplay/>
         <div className='cardRow'>
         <Card
           english={currentCard.english}

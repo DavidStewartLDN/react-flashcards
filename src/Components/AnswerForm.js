@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../index.css';
+import './AnswerForm.css';
 
 const AnswerForm = (props) => {
 
@@ -8,6 +8,12 @@ const AnswerForm = (props) => {
 
   const handleChange = (event) => {
     setValue(event.target.value);
+  }
+
+  const cardChange = (props) => {
+    if(props.english == "bye"){
+      setCorrect('blue')
+    }
   }
 
   const handleSubmit = (event) => {
@@ -22,12 +28,12 @@ const AnswerForm = (props) => {
   return (
     <div className={correct}>
       <div>
-        <div className="thing">{props.native}</div>
+        <div className="answer-form">{props.native}</div>
       </div>
       <form  
       onSubmit={handleSubmit}>
           <input type="text" value={value} onChange={handleChange} />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Check" />
       </form>
     </div>
   );
