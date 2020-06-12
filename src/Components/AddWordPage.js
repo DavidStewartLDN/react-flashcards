@@ -27,10 +27,14 @@ const AddWordPage = () => {
       setLatinScript(event.target.value);
     }
 
+    const handleSubmit = (event) => {
+      event.preventDefault();
+    }
+
   return (
     <div>
       <div className="app">
-      <form style={{color: 'white'}}>
+      <form onSubmit={handleSubmit} style={{color: 'white'}}>
         <div> English: 
           <input type="text" value={english} onChange={handleChangeEnglish} />
         </div>
