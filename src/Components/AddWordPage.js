@@ -27,6 +27,7 @@ const AddWordPage = () => {
     }
 
     const handleSubmit = (event) => {
+      event.preventDefault();
       let latin_script = latinScript;
       fetch(`http://localhost:3001/${language}/word`, {
         method: 'POST',
