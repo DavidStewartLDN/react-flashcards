@@ -57,7 +57,7 @@ const AddWordPage = () => {
         <div> Native: 
           <input type="text" value={native} onChange={handleChangeNative} />
         </div>
-        { language != 'italian' 
+        { language !== 'italian' 
               ? <div> Latin Script: 
                 <input type="text" value={latinScript} onChange={handleChangeLatinScript} />
               </div>

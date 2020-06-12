@@ -10,12 +10,6 @@ const AnswerForm = (props) => {
     setValue(event.target.value);
   }
 
-  const cardChange = (props) => {
-    if(props.english == "bye"){
-      setCorrect('blue')
-    }
-  }
-
   const handleSubmit = (event) => {
     event.preventDefault();
     if(props.english === value){
