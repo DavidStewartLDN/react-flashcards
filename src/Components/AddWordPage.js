@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useContext} from 'react';
 import './FlashCardPage.css';
 import '../index.css';
-import './DrawButton/DrawButton.css';
-import Card from './Card/Card.js';
-import DrawButton from './DrawButton/DrawButton.js';
 
 
 import { Link } from "react-router-dom";
@@ -13,6 +10,12 @@ const AddWordPage = () => {
 
     // get context
     const {language, setLanguage} = useContext(LanguageContext)
+
+    // input information
+    
+    const [english, setEnglish] = useState('')
+    const [native, setNative] = useState('')
+    const [latinScript, setLatinScript] = useState('')
 
   return (
     <div>
