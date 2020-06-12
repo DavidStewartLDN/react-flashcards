@@ -6,6 +6,8 @@ This project is currently in development. Users can choose between three languag
 
 ## Installation and Setup
 
+This application CANNOT RUN without the node backend with postgresql database that can be found [here](https://github.com/DavidStewartLDN/flashcards-backend)! 
+
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
 Installation:
