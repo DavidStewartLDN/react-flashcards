@@ -12,7 +12,6 @@ const AddWordPage = () => {
     const {language, setLanguage} = useContext(LanguageContext)
 
     // input information
-
     const [english, setEnglish] = useState('')
     const [native, setNative] = useState('')
     const [latinScript, setLatinScript] = useState('')
@@ -54,9 +53,12 @@ const AddWordPage = () => {
         <div> Native: 
           <input type="text" value={native} onChange={handleChangeNative} />
         </div>
-        <div> Latin Script: 
-          <input type="text" value={latinScript} onChange={handleChangeLatinScript} />
-        </div>
+        { language != 'italian' 
+              ? <div> Latin Script: 
+                <input type="text" value={latinScript} onChange={handleChangeLatinScript} />
+              </div>
+              : null
+         }
         <div className="buttonRow">
           <div className="buttonContainer">
             <input className="btn" type="submit" value="Add Word" />
