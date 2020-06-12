@@ -40,11 +40,11 @@ function App() {
         <Router>
           <div>
             <Switch>
-              <Route path="/test">
-                <TestPage />
-              </Route>
               <Route exact path="/">
                 <FlashCardPage />
+              </Route>
+              <Route path="/test">
+                <TestPage />
               </Route>
               <Route path="/add">
                 <AddWordPage />
