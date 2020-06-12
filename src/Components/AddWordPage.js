@@ -28,12 +28,13 @@ const AddWordPage = () => {
     }
 
     const handleSubmit = (event) => {
+      let latin_script = latinScript;
       fetch(`http://localhost:3001/${language}/word`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({english, native, latinScript})
+        body: JSON.stringify({english, native, latin_script})
       })
       .then(response => {
         return response.text();
@@ -56,7 +57,11 @@ const AddWordPage = () => {
         <div> Latin Script: 
           <input type="text" value={latinScript} onChange={handleChangeLatinScript} />
         </div>
-        <input type="submit" value="Check" />
+        <div className="buttonRow">
+          <div className="buttonContainer">
+            <input className="btn" type="submit" value="Add Word" />
+          </div>
+        </div>
       </form>
         <div className="buttonRow">
           <div className="buttonContainer">
