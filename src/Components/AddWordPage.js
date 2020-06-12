@@ -12,16 +12,30 @@ const AddWordPage = () => {
     const {language, setLanguage} = useContext(LanguageContext)
 
     // input information
-    
+
     const [english, setEnglish] = useState('')
     const [native, setNative] = useState('')
     const [latinScript, setLatinScript] = useState('')
 
+    const handleChangeEnglish = (event) => {
+      setEnglish(event.target.value);
+    }
+    const handleChangeNative = (event) => {
+      setNative(event.target.value);
+    }
+    const handleChangeLatinScript = (event) => {
+      setLatinScript(event.target.value);
+    }
+
   return (
     <div>
       <div className="app">
-        <div className='buttonRow'>
-        </div>
+      <form>
+          <input type="text" value={english} onChange={handleChangeEnglish} />
+          <input type="text" value={native} onChange={handleChangeNative} />
+          <input type="text" value={latinScript} onChange={handleChangeLatinScript} />
+        <input type="submit" value="Check" />
+      </form>
         <div className="buttonRow">
           <div className="buttonContainer">
             <Link to="/" className="btn">
