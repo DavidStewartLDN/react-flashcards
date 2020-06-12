@@ -30,10 +30,16 @@ const AddWordPage = () => {
   return (
     <div>
       <div className="app">
-      <form>
+      <form style={{color: 'white'}}>
+        <div> English: 
           <input type="text" value={english} onChange={handleChangeEnglish} />
+        </div>
+        <div> Native: 
           <input type="text" value={native} onChange={handleChangeNative} />
+        </div>
+        <div> Latin Script: 
           <input type="text" value={latinScript} onChange={handleChangeLatinScript} />
+        </div>
         <input type="submit" value="Check" />
       </form>
         <div className="buttonRow">
