@@ -43,7 +43,7 @@ function App() {
               <Route path="/test">
                 <TestPage />
               </Route>
-              <Route path="/">
+              <Route exact path="/">
                 <FlashCardPage />
               </Route>
               <Route path="/add">
