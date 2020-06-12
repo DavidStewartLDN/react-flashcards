@@ -28,7 +28,19 @@ const AddWordPage = () => {
     }
 
     const handleSubmit = (event) => {
-      event.preventDefault();
+      fetch(`http://localhost:3001/${language}/word`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({english, native, latinScript})
+      })
+      .then(response => {
+        return response.text();
+      })
+      .catch(error => {
+        console.log(error);
+      });
     }
 
   return (
