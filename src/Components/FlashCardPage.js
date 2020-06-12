@@ -61,7 +61,10 @@ const FlashCardPage = () => {
         <div className="buttonRow">
           <div className="buttonContainer">
             <Link to="/test" className="btn">
-              <button to="/test" className="btn">Test</button>
+              <button className="btn">Test</button>
+            </Link>
+            <Link to="/add" className="btn">
+              <button className="btn">Add Word</button>
             </Link>
           </div>
         </div>
