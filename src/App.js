@@ -44,6 +44,9 @@ function App() {
               <Route path="/">
                 <FlashCardPage />
               </Route>
+              <Route path="/add">
+                <AddWordPage />
+              </Route>
             </Switch>
           </div>
         </Router>
