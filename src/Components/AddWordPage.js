@@ -42,6 +42,9 @@ const AddWordPage = () => {
       .catch(error => {
         console.log(error);
       });
+      setEnglish("");
+      setNative("");
+      setLatinScript("");
     }
 
   return (
