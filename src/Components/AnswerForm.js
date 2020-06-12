@@ -10,12 +10,6 @@ const AnswerForm = (props) => {
     setValue(event.target.value);
   }
 
-  const cardChange = (props) => {
-    if(props.english == "bye"){
-      setCorrect('blue')
-    }
-  }
-
   const handleSubmit = (event) => {
     event.preventDefault();
     if(props.english === value){
@@ -30,8 +24,7 @@ const AnswerForm = (props) => {
       <div>
         <div className="answer-form">{props.native}</div>
       </div>
-      <form  
-      onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
           <input type="text" value={value} onChange={handleChange} />
         <input type="submit" value="Check" />
       </form>
