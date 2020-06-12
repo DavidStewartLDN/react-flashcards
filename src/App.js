@@ -3,6 +3,7 @@ import './index.css';
 
 import FlashCardPage from './Components/FlashCardPage';
 import TestPage from './Components/TestPage';
+import AddWordPage from './Components/AddWordPage';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ReactComponent as BellIcon } from './icons/bell.svg';
@@ -15,6 +16,7 @@ import NavItem from './Components/NavItem.js';
 import Navbar from './Components/Navbar.js';
 import { LanguageContext } from './LanguageContext';
 import CurrentLanguageDisplay from './Components/CurrentLanguageDisplay';
+
 
 
 function App() {
