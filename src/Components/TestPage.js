@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useContext} from 'react';
-import './FlashCardPage.css';
-import './TestPage.css';
 import '../index.css';
 import DrawButton from './DrawButton/DrawButton.js';
 import './DrawButton/DrawButton.css';
@@ -20,7 +18,7 @@ const TestPage = () => {
 
   useEffect(() => {
     getCards();
-    setCurrentCard({english: "Press Draw Card!"})
+    setCurrentCard({native: "Draw Card!"})
   }, [language]);
   
   function getCards() {
@@ -45,8 +43,8 @@ const TestPage = () => {
   const updateCard = () => {
     setCurrentCard(getRandomCard(cards));
   }
-
-  console.log(cards)
+  
+  console.log('hey')
 
   return (
     <div>

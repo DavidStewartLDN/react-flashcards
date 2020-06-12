@@ -1,0 +1,21 @@
+.answer-form {
+  color: #fff;
+}
+
+.green{
+  background: green;
+}
+.red{
+  background: red;
+}
+.blue{
+  background: blue;
+}
+
+.form {
+  height: 200px;
+  width: 400px;
+  position: relative;
+  text-align: center;
+  font-size: 4em;
+}
