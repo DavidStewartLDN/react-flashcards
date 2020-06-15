@@ -8,8 +8,7 @@ describe('First React component test with Enzyme', () => {
     });
 });
 
-describe('Examining the syntax of Jest tests', () => {
-   
+describe('Examining the syntax of Jest tests', () => { 
   it('sums numbers', () => {
       expect(1 + 2).toEqual(3);
       expect(2 + 2).toEqual(4);
