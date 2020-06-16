@@ -1,0 +1,334 @@
+{
+  "russian_cards": [
+    {
+      "id": 1,
+      "type": "to have",
+      "russian": "У меня вопрос",
+      "english": "I have a question"
+    },
+    {
+      "id": 2,
+      "type": "to have",
+      "russian": "У меня есть сестра",
+      "english": "I have a sister"
+    },
+    {
+      "id": 3,
+      "type": "to have",
+      "russian": "у нас много еды",
+      "english": "We have a lot of food"
+    },
+    {
+      "id": 4,
+      "type": "to have",
+      "russian": "У них много друзей?",
+      "english": "They have many friends"
+    },
+    {
+      "id": 5,
+      "type": "to have",
+      "russian": "у неё есть кошка",
+      "english": "She has a cat"
+    },
+    {
+      "id": 6,
+      "type": "to have",
+      "russian": "у него темные волосы",
+      "english": "He has dark hair"
+    },
+    {
+      "id": 7,
+      "type": "to have",
+      "russian": "у вас есть проблемы с этим?",
+      "english": "You have a problem with that?"
+    },
+    {
+      "id": 8,
+      "type": "opinion phrases",
+      "russian": "Я думаю что ты волосатый",
+      "english": "I think that you are hairy (masc.)"
+    },
+    {
+      "id": 9,
+      "type": "opinion phrases",
+      "russian": "Я думаю что она волосатая",
+      "english": "I think that she is hairy"
+    },
+    {
+      "id": 10,
+      "type": "opinion phrases",
+      "russian": "Я думаю что ты умный/умная",
+      "english": "I think that you are smart"
+    },
+    {
+      "id": 11,
+      "type": "opinion phrases",
+      "russian": "Я считаю тебя скучным",
+      "english": "I consider you to be boring"
+    },
+    {
+      "id": 12,
+      "type": "opinion phrases",
+      "russian": "Я верю что ты прав",
+      "english": "I believe that you are right."
+    },
+    {
+      "id": 13,
+      "type": "opinion phrases",
+      "russian": "я знаю что ты чувствуешь брат",
+      "english": "I know that feel bro"
+    },
+    {
+      "id": 14,
+      "type": "opinion phrases",
+      "russian": "ты мне так нравишься",
+      "english": "I like you so much"
+    },
+    {
+      "id": 15,
+      "type": "opinion phrases",
+      "russian": "мне нравится все",
+      "english": "I like everything"
+    },
+    {
+      "id": 16,
+      "type": "opinion phrases",
+      "russian": "Тебе здесь не нравится",
+      "english": "You don’t like it here?"
+    },
+    {
+      "id": 17,
+      "type": "opinion phrases",
+      "russian": "Я тебе не нравлюсь?",
+      "english": "You don’t like me?"
+    },
+    {
+      "id": 18,
+      "type": "opinion phrases",
+      "russian": "Я не люблю брюссельскую капусту",
+      "english": "I don’t love brussels sprouts"
+    },
+    {
+      "id": 19,
+      "type": "to be able",
+      "russian": "Я могу говорить по-русски",
+      "english": "I can speak Russian"
+    },
+    {
+      "id": 20,
+      "type": "to be able",
+      "russian": "ты можешь кататься на велосипеде",
+      "english": "You can ride a bike?"
+    },
+    {
+      "id": 21,
+      "type": "to be able",
+      "russian": "ты можешь это сделать",
+      "english": "You can do it"
+    },
+    {
+      "id": 22,
+      "type": "to be able",
+      "russian": "Он может громко кричать",
+      "english": "He can shout loudly"
+    },
+    {
+      "id": 23,
+      "type": "to be able",
+      "russian": "Мы можем пойти",
+      "english": "We can go!"
+    },
+    {
+      "id": 24,
+      "type": "to be able",
+      "russian": "вы можете сказать",
+      "english": "You can say"
+    },
+    {
+      "id": 25,
+      "type": "to be able",
+      "russian": "вы можете сказать мне",
+      "english": "You can tell me"
+    },
+    {
+      "id": 26,
+      "type": "to be able",
+      "russian": "Они могут быть опасными",
+      "english": "They can be dangerous"
+    },
+    {
+      "id": 27,
+      "type": "to want",
+      "russian": "я хочу увидеть тебя",
+      "english": "I want to see you"
+    },
+    {
+      "id": 28,
+      "type": "to want",
+      "russian": "я хочу съесть что-нибудь",
+      "english": "I want to eat something"
+    },
+    {
+      "id": 29,
+      "type": "to want",
+      "russian": "ты хочешь спать?",
+      "english": "You want to sleep"
+    },
+    {
+      "id": 30,
+      "type": "to want",
+      "russian": "Он хочет драться",
+      "english": "He wants to fight"
+    },
+    {
+      "id": 31,
+      "type": "to want",
+      "russian": "мы хотим услышать от тебя",
+      "english": "We want to hear from you"
+    },
+    {
+      "id": 32,
+      "type": "to want",
+      "russian": "Вы хотите покинуть вечеринку сейчас",
+      "english": "You want to leave the party now"
+    },
+    {
+      "id": 33,
+      "type": "to want",
+      "russian": "они хотят встретиться с Мерил Стрип",
+      "english": "They want to meet Meryl Streep"
+    },
+    {
+      "id": 34,
+      "type": "time words",
+      "russian": "иногда я удивляюсь почему",
+      "english": "Sometimes I wonder why"
+    },
+    {
+      "id": 35,
+      "type": "time words",
+      "russian": "иногда мне интересно, почему я пытаюсь",
+      "english": "Sometimes I wonder why I try"
+    },
+    {
+      "id": 36,
+      "type": "time words",
+      "russian": "никогда не сдавайся",
+      "english": "never give up"
+    },
+    {
+      "id": 37,
+      "type": "time words",
+      "russian": "я думаю о тебе все время",
+      "english": "I thnk about you all the time"
+    },
+    {
+      "id": 38,
+      "type": "time words",
+      "russian": "утром я завтракаю",
+      "english": "In the morning I eat breakfast"
+    },
+    {
+      "id": 39,
+      "type": "time words",
+      "russian": "утром я чищу зубы",
+      "english": "In the morning I brush my teeth"
+    },
+    {
+      "id": 40,
+      "type": "time words",
+      "russian": "после обеда снова будет идти немно",
+      "english": "After lunch I will go a little bit again (to shit)"
+    },
+    {
+      "id": 41,
+      "type": "time words",
+      "russian": "днем я иду в туалет",
+      "english": "In the afternoon I go to the toilet"
+    },
+    {
+      "id": 42,
+      "type": "time words",
+      "russian": "вечером я смотрю телевизор",
+      "english": "In the evening I watch TV"
+    },
+    {
+      "id": 43,
+      "type": "time words",
+      "russian": "ночью, когда воздух дует мне в волосы",
+      "english": "At night when air blows my hairs"
+    },
+    {
+      "id": 44,
+      "type": "time words",
+      "russian": "тогда что?",
+      "english": "Then what?"
+    },
+    {
+      "id": 45,
+      "type": "time words",
+      "russian": "тогда сколько тебе лет?",
+      "english": "then how old are you?"
+    },
+    {
+      "id": 46,
+      "type": "time words",
+      "russian": "я всегда делаю",
+      "english": "I always do"
+    },
+    {
+      "id": 47,
+      "type": "time words",
+      "russian": "Он всегда ходит в школу",
+      "english": "He always walks to school"
+    },
+    {
+      "id": 48,
+      "type": "time words",
+      "russian": "иногда да",
+      "english": "Sometimes, yes"
+    },
+    {
+      "id": 49,
+      "type": "time words",
+      "russian": "весной я ношу джемпер",
+      "english": "In spring, I wear a jumper"
+    },
+    {
+      "id": 50,
+      "type": "time words",
+      "russian": "Летом ярко светит солнце",
+      "english": "In summer the sun shines brightly"
+    },
+    {
+      "id": 51,
+      "type": "time words",
+      "russian": "Осенью дни становятся короче",
+      "english": "In Autumn the days are becoming shorter"
+    },
+    {
+      "id": 52,
+      "type": "time words",
+      "russian": "зимой есть лед и снег",
+      "english": "In winter there is ice and snow"
+    },
+    {
+      "id": 53,
+      "type": "time words",
+      "russian": "В прошлом году мы ездили в Италию",
+      "english": "Last year we went to Italy"
+    },
+    {
+      "id": 54,
+      "type": "time words",
+      "russian": "В этом году я хочу научиться говорить по-русски",
+      "english": "This year I want to learn to speak Russian"
+    },
+    {
+      "id": 55,
+      "type": "time words",
+      "russian": "В следующем году я хочу посетить Грузию",
+      "english": "Next year I want to visit Georgia"
+    }
+  ]
+}
