@@ -1,12 +1,17 @@
 const express = require('express')
+
+const path = require('path');
+
 const app = express()
-const port = 3001
 
 const russian_model = require('./russian_model')
 const italian_model = require('./italian_model')
 const mandarin_model = require('./mandarin_model')
 
-app.use(express.json())
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+// app.use(express.json())
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
@@ -140,6 +145,14 @@ app.delete('/mandarin/word/:id', (req, res) => {
     res.status(500).send(error);
   })
 })
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
