@@ -22,7 +22,7 @@ const TestPage = () => {
   }, [language]);
   
   function getCards() {
-    fetch(`http://localhost:3001/${language}`)
+    fetch(`/${language}`)
       .then(response => {
         return response.text();
       })
