@@ -1,11 +1,21 @@
-const Pool = require('pg').Pool
+require('dotenv').config()
+
+const { Pool } = require('pg');
 const pool = new Pool({
-  user: 'my_user',
-  host: 'localhost',
-  database: 'flashcards',
-  password: 'root',
-  port: 5432,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
+
+// const Pool = require('pg').Pool
+// const pool = new Pool({
+//   user: process.env.USER,
+//   host: process.env.HOST,
+//   database: process.env.DATABASE,
+//   password: process.env.PASSWORD,
+//   port: process.env.PORT,
+// });
 
 const getMandarin = () => {
   return new Promise(function(resolve, reject) {
