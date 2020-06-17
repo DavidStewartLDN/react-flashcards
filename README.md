@@ -8,23 +8,30 @@ This project is currently in development. Users can choose between three languag
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-Installation:
+### To Start Express Server:
+
+To install all node modules that you need run:
 
 `npm install`   
 
-To Start Express Server:
+Once you have your modules installed you are ready to start running the Express server that provides access to the database:
 
-`npm start` 
+`node index.js` 
 
-To Start React App:
+### To Start React App:
+
+Once you have the server running, navigate to the client folder:
 
 `cd client`
 
-`npm install`
+To install the node modules for the React App itself, run:
 
 `npm install`
 
-To Visit App:
+Once you have installed the node modules you are ready to rumble and start the app:
+
+`npm start`
+
+To visit the app:
 
 `localhost:3000`
-
