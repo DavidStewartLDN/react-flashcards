@@ -20,7 +20,9 @@ To Start React App:
 
 `cd client`
 
-`npm install` 
+`npm install`
+
+`npm install`
 
 To Visit App:
 
