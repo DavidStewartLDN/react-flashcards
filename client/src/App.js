@@ -26,10 +26,6 @@ function App() {
     <div>
       <LanguageContext.Provider value={{ language, setLanguage }}>
         <Navbar>
-          <NavItem icon={<PlusIcon />} />
-          <NavItem icon={<BellIcon />} />
-          <NavItem icon={<MessengerIcon />} />
-
           <NavItem icon={<CaretIcon />}>
             <DropdownMenu></DropdownMenu>
           </NavItem>
