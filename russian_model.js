@@ -1,10 +1,12 @@
+require('dotenv').config()
+
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'my_user',
-  host: 'localhost',
-  database: 'flashcards',
-  password: 'root',
-  port: 5432,
+  user: process.env.USER,
+  host: process.env.HOST,
+  database: process.env.DATABASE,
+  password: process.env.PASSWORD,
+  port: process.env.PORT,
 });
 
 const getRussian = () => {
