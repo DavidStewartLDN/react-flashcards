@@ -1,15 +1,13 @@
 require('dotenv').config()
-const pg = require('pg');
-const pool = pg.connect(process.env.DATABASE_URL);
 
-// const Pool = require('pg').Pool
-// const pool = new Pool({
-//   user: process.env.USER,
-//   host: process.env.HOST,
-//   database: process.env.DATABASE,
-//   password: process.env.PASSWORD,
-//   port: process.env.PORT,
-// });
+const Pool = require('pg').Pool
+const pool = new Pool({
+  user: process.env.USER,
+  host: process.env.HOST,
+  database: process.env.DATABASE,
+  password: process.env.PASSWORD,
+  port: process.env.PORT,
+});
 
 const getItalian = () => {
   return new Promise(function(resolve, reject) {
