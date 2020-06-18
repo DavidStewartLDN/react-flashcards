@@ -1,8 +1,8 @@
 # React Flashcards
-An application for learning languages, built with React, Node.js and PostgreSQL.
+An application for learning modern languages, built with React, Node.js and PostgreSQL. You can access the repo on [heroku here](https://language-learning-flashcards.herokuapp.com/). 
 
 ## Project Status
-This project is currently in development. Users can choose between three languages they want to learn, add new words and can test their knowlendge on the test page.
+This project is currently in development. Users can choose between three languages (Mandarin, Russian and Italian) which they want to learn, add new words and can test their knowlendge on the test page.
 
 ## To Get Started
 
