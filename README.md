@@ -1,8 +1,18 @@
 # React Flashcards
-An application for learning modern languages, built with React, Node.js and PostgreSQL. You can access the repo on [heroku here](https://language-learning-flashcards.herokuapp.com/). 
+This web application was created by [David Stewart](https://github.com/DavidStewartLDN) and [Daria Thompson](https://github.com/dariathompson) application for learning modern languages, built with React, Node.js and PostgreSQL. You can access the live project on [heroku here](https://language-learning-flashcards.herokuapp.com/). 
 
 ## Project Status
-This project is currently in development. Users can choose between three languages (Mandarin, Russian and Italian) which they want to learn, add new words and can test their knowlendge on the test page.
+This project is currently in development. Users can choose between three languages (Mandarin, Russian and Italian) to learn from, add new words and can test their knowledge on the test page.
+
+# Project Structure
+## Tech stack
+
+This project uses a React front-end paired with a Node.js backend which is included in this repository. 
+
+Things we learnt in this project:
+- How to correctly pass in props to components
+- Seperating components into small classes
+- Using **React-Context** to have langauge saved as a variable app wide and when changing between pages
 
 ## To Get Started
 
