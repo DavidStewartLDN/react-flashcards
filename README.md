@@ -1,4 +1,8 @@
 # React Flashcards
+<p align="center">
+<img src="images/flashcards.gif" width="600" />
+</p>
+
 This web application was created by [David Stewart](https://github.com/DavidStewartLDN) and [Daria Thompson](https://github.com/dariathompson) application for learning modern languages, built with React, Node.js and PostgreSQL. You can access the live project on [heroku here](https://language-learning-flashcards.herokuapp.com/). 
 
 ## Project Status
