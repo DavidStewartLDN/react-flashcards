@@ -14,6 +14,11 @@ Things we learnt in this project:
 - Seperating components into small classes
 - Using **React-Context** to have langauge saved as a variable app wide and when changing between pages
 
+<p float="middle">
+  <img src="images/React.png" width="400" />
+  <img src="images/node-js.png" width="400" /> 
+</p>
+
 ## To Get Started
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
